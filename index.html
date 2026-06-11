@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Carbono ILPF - Dia da Colheita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Calculadora Agro-Carbono</h1>
+    <div class="subtitulo">Balanço do Dia da Colheita em Sistemas ILPF</div>
+
+    <form id="formCarbono">
+        <fieldset>
+            <legend>🚜 Emissões do Dia</legend>
+            <div class="campo">
+                <label for="diesel">Óleo Diesel gasto nas colheitadeiras/tratores (Litros):</label>
+                <input type="number" id="diesel" min="0" placeholder="Ex: 200" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>🌳 Sequestro de Carbono (ILPF)</legend>
+            <div class="campo">
+                <label for="area">Área total colhida hoje (Hectares):</label>
+                <input type="number" id="area" min="0" placeholder="Ex: 15" required>
+            </div>
+            <div class="campo">
+                <label for="arvores">Quantidade de árvores por hectare na área:</label>
+                <input type="number" id="arvores" min="0" placeholder="Ex: 200" required>
+            </div>
+        </fieldset>
+
+        <button type="button" onclick="calcularBalançoCarbono()">Calcular Impacto de Hoje!</button>
+    </form>
+
+    <div id="painelResultado" class="painel-resultado">
+        <div id="resTitulo" class="resultado-titulo"></div>
+        <div id="resEmissao" class="resultado-detalhe"></div>
+        <div id="resSequestro" class="resultado-detalhe"></div>
+        <div id="resFinal" class="resultado-final"></div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

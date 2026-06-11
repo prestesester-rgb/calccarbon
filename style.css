@@ -1,0 +1,150 @@
+/* Definição das cores e fontes solicitadas */
+:root {
+    --verde-escuro: #1b5e20;
+    --verde-medio: #4caf50;
+    --verde-claro: #e8f5e9;
+    --verde-fundo: #c8e6c9;
+    --texto-escuro: #0a230c;
+    
+    /* Fontes solicitadas pelo usuário */
+    --fonte-titulo: 'Lucida Handwriting', 'Comic Sans MS', cursive, sans-serif;
+    --fonte-texto: 'Comic Sans MS', 'Lucida Handwriting', sans-serif;
+}
+
+body {
+    background-color: var(--verde-fundo);
+    color: var(--texto-escuro);
+    font-family: var(--fonte-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--verde-claro);
+    max-width: 650px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    border: 4px solid var(--verde-escuro);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    color: var(--verde-escuro);
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 16px;
+    color: var(--verde-escuro);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 2px dashed var(--verde-escuro);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--verde-escuro);
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--verde-medio);
+    border-radius: 8px;
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+input[type="number"]:focus {
+    border-color: var(--verde-escuro);
+    outline: none;
+    background-color: #fffde7;
+}
+
+button {
+    width: 100%;
+    background-color: var(--verde-escuro);
+    color: white;
+    font-family: var(--fonte-texto);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: var(--verde-medio);
+}
+
+.painel-resultado {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+    text-align: center;
+    border: 3px solid;
+}
+
+.resultado-positivo {
+    background-color: #c8e6c9;
+    border-color: var(--verde-escuro);
+    color: var(--verde-escuro);
+}
+
+.resultado-negativo {
+    background-color: #ffcdd2;
+    border-color: #b71c1c;
+    color: #b71c1c;
+}
+
+.resultado-titulo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.resultado-detalhe {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.resultado-final {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-decoration: underline;
+}
